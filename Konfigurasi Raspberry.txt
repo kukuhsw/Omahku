@@ -1,0 +1,8 @@
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install nodejs
+
+openssl x509 -in ./CA-roots/VeriSign-Class\ 3-Public-Primary-Certification-Authority-G5.pem -inform PEM -out root-CA.crt
+chmod 775 root-CA.crt
+
+npm install aws-iot-device-sdk
